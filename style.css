@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    background: white;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #F88158;
+    pointer-events: none;
+    margin-left: 150px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #F88158;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover, .navigation a:active{
+    background: #F88158;
+    color: #fff;
+}
+
+.parallax{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #F88158;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+#picsideup{
+    position: relative;
+    width: 55%;
+}
+
+#ring{
+    width: 20%;
+}
+
+.sec{
+    margin: 0;
+    padding: 0;
+    height: max-content;
+    position: relative;
+    background: #09090b;
+    padding: 80px 110px ;
+}
+
+.sec h2{
+    font-size: 3em;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sec p{
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sec h3{
+    font-size: 2em;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.sec h4{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.slider{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    height: 500px;
+    position: relative;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 1000%;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #F88158;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: #F88158;
+}
+
+#radio1:checked ~ .first,
+#radio4:checked ~ .first,
+#radio7:checked ~ .first,
+#radio10:checked ~ .first,
+#radio13:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first,
+#radio5:checked ~ .first,
+#radio8:checked ~ .first,
+#radio11:checked ~ .first,
+#radio14:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first,
+#radio6:checked ~ .first,
+#radio9:checked ~ .first,
+#radio12:checked ~ .first,
+#radio15:checked ~ .first{
+    margin-left: -40%;
+}
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div{
+    border: 2px solid #F88158;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4,
+#radio5:checked ~ .navigation-auto .auto-btn5,
+#radio6:checked ~ .navigation-auto .auto-btn6,
+#radio7:checked ~ .navigation-auto .auto-btn7,
+#radio8:checked ~ .navigation-auto .auto-btn8,
+#radio9:checked ~ .navigation-auto .auto-btn9,
+#radio10:checked ~ .navigation-auto .auto-btn10,
+#radio11:checked ~ .navigation-auto .auto-btn11,
+#radio12:checked ~ .navigation-auto .auto-btn12,
+#radio13:checked ~ .navigation-auto .auto-btn13,
+#radio14:checked ~ .navigation-auto .auto-btn14,
+#radio15:checked ~ .navigation-auto .auto-btn15{
+    background: #F88158;
+}
+
+
+@media(max-width: 700px) {
+    body{
+        width: max-content;
+    }
+    header{
+        width: max-content;
+    }
+    
+    .logo{
+        margin-left: 100px;
+        margin-right: 300px;
+    }
+    
+}
