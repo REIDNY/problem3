@@ -6,13 +6,14 @@
 }
 
 html{
+    height: 100%;
     scroll-behavior: smooth;
 }
 body{
     width: 100%;
     background: white;
-    min-height: 100%;
-    overflow-x: hidden;
+    height: 100%;
+    overflow: auto;
 }
 
 header{
@@ -25,13 +26,6 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-
-.logo{
-    font-size: 2rem;
-    color: #F88158;
-    pointer-events: none;
-    margin-left: 150px;
 }
 
 .navigation a{
@@ -58,9 +52,12 @@ header{
 }
 
 #text{
+    width: 600px;
+    max-width: 76vh;
     position: absolute;
-    font-size: 5em;
+    font-size: 80px;
     color: #F88158;
+    text-align: center;
 }
 
 .parallax img{
@@ -81,26 +78,19 @@ header{
     width: 20%;
 }
 
-.sec{
+.sec, .content{
     margin: 0;
     padding: 0;
     height: max-content;
     position: relative;
     background: #09090b;
-    padding: 80px 110px ;
+    padding: 60px 90px ; 
 }
 
 .sec h2{
     font-size: 3em;
     color: white;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.sec p{
-    font-size: 1em;
-    color: white;
-    font-weight: 300;
+    margin: 20px 0;
     text-align: center;
 }
 
@@ -149,7 +139,7 @@ header{
 .slide img{
     width: 800px;
     height: 500px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .navigation-manual{
@@ -237,18 +227,137 @@ header{
     background: #F88158;
 }
 
+.content h1{
+    font-size: 3em;
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+}
 
-@media(max-width: 700px) {
-    body{
-        width: max-content;
+.box{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    color: white;
+    text-align: justify;
+}
+
+@media(orientation: portrait){
+    html{
+        overflow: hidden;
     }
     header{
-        width: max-content;
+        padding: 10px 10px;
     }
     
-    .logo{
-        margin-left: 100px;
-        margin-right: 300px;
+    .navigation a{
+        font-size: 12px;
+        padding: 6px 6px;
+        margin: 0;
+    }
+    .parallax{
+        width: 100%;
+        height: 37vh;
+    }
+    #text{
+        width: 150px;
+        font-size: 24px;
+    }
+    .sec, .content{
+        padding: 10px; 
     }
     
+    .sec h2{
+        font-size: 16px;
+    }
+    
+    .sec h3{
+        font-size: 12px;
+    }
+    
+    .sec h4{
+        font-size: 10px;
+    }
+    
+    .slider{
+        width: 100%;
+        max-width: 500px;
+        height: 200px;
+    }
+
+    .slides{
+        width: 100%;
+        height: 200px;
+    }
+
+    .slide{
+        width: 100%;
+        transition: 2s;
+    }
+    
+    .slide img{
+        width: 300px;
+        height: 200px;
+    }
+    
+    .navigation-manual{
+        width: 300px;
+        margin-top: -20px;
+    }
+    
+    #radio1:checked ~ .first,
+    #radio4:checked ~ .first,
+    #radio7:checked ~ .first,
+    #radio10:checked ~ .first,
+    #radio13:checked ~ .first{
+        margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first,
+    #radio5:checked ~ .first,
+    #radio8:checked ~ .first,
+    #radio11:checked ~ .first,
+    #radio14:checked ~ .first{
+        margin-left: -100%;
+    }
+    
+    #radio3:checked ~ .first,
+    #radio6:checked ~ .first,
+    #radio9:checked ~ .first,
+    #radio12:checked ~ .first,
+    #radio15:checked ~ .first{
+        margin-left: -200%;
+    }
+    
+    #radio1:checked ~ .navigation-auto .auto-btn1,
+    #radio2:checked ~ .navigation-auto .auto-btn2,
+    #radio3:checked ~ .navigation-auto .auto-btn3,
+    #radio4:checked ~ .navigation-auto .auto-btn4,
+    #radio5:checked ~ .navigation-auto .auto-btn5,
+    #radio6:checked ~ .navigation-auto .auto-btn6,
+    #radio7:checked ~ .navigation-auto .auto-btn7,
+    #radio8:checked ~ .navigation-auto .auto-btn8,
+    #radio9:checked ~ .navigation-auto .auto-btn9,
+    #radio10:checked ~ .navigation-auto .auto-btn10,
+    #radio11:checked ~ .navigation-auto .auto-btn11,
+    #radio12:checked ~ .navigation-auto .auto-btn12,
+    #radio13:checked ~ .navigation-auto .auto-btn13,
+    #radio14:checked ~ .navigation-auto .auto-btn14,
+    #radio15:checked ~ .navigation-auto .auto-btn15{
+        background: #F88158;
+    }
+    
+    .content h1{
+        font-size: 16px;
+        color: white;
+        margin: 20px 20px;
+    }
+    
+    .box{
+        width: 75%;
+        font-size: 12px;
+        max-width: 500px;
+    }
 }
